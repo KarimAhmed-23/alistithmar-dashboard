@@ -2,8 +2,7 @@
   "collectionName": "components_mini_comp_report_tabs",
   "info": {
     "displayName": "ReportTab",
-    "icon": "calendar",
-    "description": ""
+    "icon": "calendar"
   },
   "options": {},
   "attributes": {
@@ -16,8 +15,7 @@
       "type": "component",
       "repeatable": true,
       "component": "mini-comp.report-file",
-      "min": 1,
-      "required": true
+      "min": 1
     }
   }
 }
