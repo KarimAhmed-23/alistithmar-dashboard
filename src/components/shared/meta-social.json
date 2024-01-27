@@ -15,10 +15,6 @@
       ],
       "required": true
     },
-    "title": {
-      "type": "string",
-      "required": true
-    },
     "description": {
       "type": "text",
       "required": true
@@ -30,6 +26,9 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "title": {
+      "type": "string"
     }
   }
 }

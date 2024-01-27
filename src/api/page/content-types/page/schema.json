@@ -34,7 +34,7 @@
         }
       },
       "component": "shared.seo",
-      "required": false
+      "required": true
     },
     "Reports": {
       "type": "component",

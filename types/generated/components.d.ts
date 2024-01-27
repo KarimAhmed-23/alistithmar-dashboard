@@ -54,9 +54,9 @@ export interface SharedMetaSocial extends Schema.Component {
   attributes: {
     socialNetwork: Attribute.Enumeration<['facebook', 'twitter', 'linkedin']> &
       Attribute.Required;
-    title: Attribute.String & Attribute.Required;
     description: Attribute.Text & Attribute.Required;
     image: Attribute.Media & Attribute.Required;
+    title: Attribute.String;
   };
 }
 
