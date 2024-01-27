@@ -13,15 +13,15 @@
         "twitter",
         "linkedin"
       ],
-      "private": true
+      "required": true
     },
     "title": {
       "type": "string",
-      "private": true
+      "required": true
     },
     "description": {
       "type": "text",
-      "private": true
+      "required": true
     },
     "image": {
       "type": "media",

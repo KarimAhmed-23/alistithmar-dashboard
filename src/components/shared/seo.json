@@ -9,47 +9,21 @@
   "attributes": {
     "metaTitle": {
       "type": "string",
-      "private": true
-    },
-    "metaDescription": {
-      "type": "string",
-      "private": true
-    },
-    "metaImage": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "private": true,
-      "allowedTypes": [
-        "images"
-      ]
+      "required": true
     },
     "metaSocial": {
       "displayName": "metaSocial",
       "type": "component",
       "repeatable": true,
-      "component": "shared.meta-social",
-      "private": true
+      "component": "shared.meta-social"
     },
     "keywords": {
       "type": "string",
-      "private": true
+      "required": true
     },
-    "metaRobots": {
+    "metaDescription": {
       "type": "string",
-      "private": true
-    },
-    "structuredData": {
-      "type": "json",
-      "private": true
-    },
-    "metaViewport": {
-      "type": "string",
-      "private": true
-    },
-    "canonicalURL": {
-      "type": "string",
-      "private": true
+      "required": true
     }
   }
 }

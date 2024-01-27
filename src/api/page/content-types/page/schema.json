@@ -34,7 +34,7 @@
         }
       },
       "component": "shared.seo",
-      "required": true
+      "required": false
     },
     "Reports": {
       "type": "component",
@@ -45,8 +45,7 @@
         }
       },
       "component": "page-comp.reports",
-      "required": true,
-      "private": true
+      "required": true
     }
   }
 }

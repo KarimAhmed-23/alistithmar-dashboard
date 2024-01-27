@@ -17,10 +17,12 @@ export interface MiniCompReportTab extends Schema.Component {
   info: {
     displayName: 'ReportTab';
     icon: 'calendar';
+    description: '';
   };
   attributes: {
     TabTitle: Attribute.String & Attribute.Required;
     ReportFile: Attribute.Component<'mini-comp.report-file', true> &
+      Attribute.Required &
       Attribute.SetMinMax<{
         min: 1;
       }>;
@@ -51,9 +53,9 @@ export interface SharedMetaSocial extends Schema.Component {
   };
   attributes: {
     socialNetwork: Attribute.Enumeration<['facebook', 'twitter', 'linkedin']> &
-      Attribute.Private;
-    title: Attribute.String & Attribute.Private;
-    description: Attribute.Text & Attribute.Private;
+      Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
     image: Attribute.Media & Attribute.Required;
   };
 }
@@ -66,16 +68,10 @@ export interface SharedSeo extends Schema.Component {
     description: '';
   };
   attributes: {
-    metaTitle: Attribute.String & Attribute.Private;
-    metaDescription: Attribute.String & Attribute.Private;
-    metaImage: Attribute.Media & Attribute.Private;
-    metaSocial: Attribute.Component<'shared.meta-social', true> &
-      Attribute.Private;
-    keywords: Attribute.String & Attribute.Private;
-    metaRobots: Attribute.String & Attribute.Private;
-    structuredData: Attribute.JSON & Attribute.Private;
-    metaViewport: Attribute.String & Attribute.Private;
-    canonicalURL: Attribute.String & Attribute.Private;
+    metaTitle: Attribute.String & Attribute.Required;
+    metaSocial: Attribute.Component<'shared.meta-social', true>;
+    keywords: Attribute.String & Attribute.Required;
+    metaDescription: Attribute.String & Attribute.Required;
   };
 }
 
