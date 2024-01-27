@@ -368,6 +368,7 @@ export interface ApiPagePage extends Schema.CollectionType {
     singularName: 'page';
     pluralName: 'pages';
     displayName: 'Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -394,6 +395,7 @@ export interface ApiPagePage extends Schema.CollectionType {
       }>;
     Reports: Attribute.Component<'page-comp.reports'> &
       Attribute.Required &
+      Attribute.Private &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

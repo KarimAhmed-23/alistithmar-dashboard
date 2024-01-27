@@ -4,7 +4,8 @@
   "info": {
     "singularName": "page",
     "pluralName": "pages",
-    "displayName": "Page"
+    "displayName": "Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -44,7 +45,8 @@
         }
       },
       "component": "page-comp.reports",
-      "required": true
+      "required": true,
+      "private": true
     }
   }
 }

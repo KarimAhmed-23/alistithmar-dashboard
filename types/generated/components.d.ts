@@ -47,11 +47,13 @@ export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
     displayName: 'metaSocial';
+    description: '';
   };
   attributes: {
-    socialNetwork: Attribute.Enumeration<['facebook', 'twitter', 'linkedin']>;
-    title: Attribute.String;
-    description: Attribute.Text;
+    socialNetwork: Attribute.Enumeration<['facebook', 'twitter', 'linkedin']> &
+      Attribute.Private;
+    title: Attribute.String & Attribute.Private;
+    description: Attribute.Text & Attribute.Private;
     image: Attribute.Media & Attribute.Required;
   };
 }
@@ -61,17 +63,19 @@ export interface SharedSeo extends Schema.Component {
   info: {
     displayName: 'seo';
     icon: 'server';
+    description: '';
   };
   attributes: {
-    metaTitle: Attribute.String;
-    metaDescription: Attribute.String;
-    metaImage: Attribute.Media;
-    metaSocial: Attribute.Component<'shared.meta-social', true>;
-    keywords: Attribute.String;
-    metaRobots: Attribute.String;
-    structuredData: Attribute.JSON;
-    metaViewport: Attribute.String;
-    canonicalURL: Attribute.String;
+    metaTitle: Attribute.String & Attribute.Private;
+    metaDescription: Attribute.String & Attribute.Private;
+    metaImage: Attribute.Media & Attribute.Private;
+    metaSocial: Attribute.Component<'shared.meta-social', true> &
+      Attribute.Private;
+    keywords: Attribute.String & Attribute.Private;
+    metaRobots: Attribute.String & Attribute.Private;
+    structuredData: Attribute.JSON & Attribute.Private;
+    metaViewport: Attribute.String & Attribute.Private;
+    canonicalURL: Attribute.String & Attribute.Private;
   };
 }
 

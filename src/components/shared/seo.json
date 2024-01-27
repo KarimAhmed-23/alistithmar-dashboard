@@ -2,43 +2,54 @@
   "collectionName": "components_shared_seos",
   "info": {
     "displayName": "seo",
-    "icon": "server"
+    "icon": "server",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "metaTitle": {
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "metaDescription": {
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "metaImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "private": true,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "metaSocial": {
       "displayName": "metaSocial",
       "type": "component",
       "repeatable": true,
-      "component": "shared.meta-social"
+      "component": "shared.meta-social",
+      "private": true
     },
     "keywords": {
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "metaRobots": {
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "structuredData": {
-      "type": "json"
+      "type": "json",
+      "private": true
     },
     "metaViewport": {
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "canonicalURL": {
-      "type": "string"
+      "type": "string",
+      "private": true
     }
   }
 }
