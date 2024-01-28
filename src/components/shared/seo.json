@@ -16,10 +16,11 @@
       "displayName": "metaSocial",
       "type": "component",
       "repeatable": true,
-      "component": "shared.meta-social"
+      "component": "shared.meta-social",
+      "required": true
     },
     "keywords": {
-      "type": "string",
+      "type": "text",
       "required": true,
       "maxLength": 200
     },

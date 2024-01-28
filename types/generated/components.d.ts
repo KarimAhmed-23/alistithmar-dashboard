@@ -90,8 +90,9 @@ export interface SharedSeo extends Schema.Component {
       Attribute.SetMinMaxLength<{
         maxLength: 50;
       }>;
-    metaSocial: Attribute.Component<'shared.meta-social', true>;
-    keywords: Attribute.String &
+    metaSocial: Attribute.Component<'shared.meta-social', true> &
+      Attribute.Required;
+    keywords: Attribute.Text &
       Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 200;

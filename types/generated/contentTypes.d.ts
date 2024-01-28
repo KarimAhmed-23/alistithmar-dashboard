@@ -385,6 +385,9 @@ export interface ApiPagePage extends Schema.CollectionType {
         i18n: {
           localized: true;
         };
+      }> &
+      Attribute.SetMinMaxLength<{
+        maxLength: 50;
       }>;
     seo: Attribute.Component<'shared.seo'> &
       Attribute.Required &
