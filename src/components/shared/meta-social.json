@@ -17,7 +17,8 @@
     },
     "description": {
       "type": "text",
-      "required": true
+      "required": true,
+      "maxLength": 500
     },
     "image": {
       "type": "media",
@@ -28,7 +29,8 @@
       ]
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 50
     }
   }
 }

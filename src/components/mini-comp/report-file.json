@@ -2,21 +2,23 @@
   "collectionName": "components_mini_comp_report_files",
   "info": {
     "displayName": "ReportFile",
-    "icon": "filePdf"
+    "icon": "filePdf",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "FileName": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 50
     },
     "asset": {
-      "allowedTypes": [
-        "files"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "files"
+      ]
     }
   }
 }

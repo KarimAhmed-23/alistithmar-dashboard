@@ -5,9 +5,14 @@ export interface MiniCompReportFile extends Schema.Component {
   info: {
     displayName: 'ReportFile';
     icon: 'filePdf';
+    description: '';
   };
   attributes: {
-    FileName: Attribute.String & Attribute.Required;
+    FileName: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 50;
+      }>;
     asset: Attribute.Media & Attribute.Required;
   };
 }
@@ -20,11 +25,16 @@ export interface MiniCompReportTab extends Schema.Component {
     description: '';
   };
   attributes: {
-    TabTitle: Attribute.String & Attribute.Required;
+    TabTitle: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 50;
+      }>;
     ReportFile: Attribute.Component<'mini-comp.report-file', true> &
       Attribute.Required &
       Attribute.SetMinMax<{
         min: 1;
+        max: 10;
       }>;
   };
 }
@@ -54,9 +64,16 @@ export interface SharedMetaSocial extends Schema.Component {
   attributes: {
     socialNetwork: Attribute.Enumeration<['facebook', 'twitter', 'linkedin']> &
       Attribute.Required;
-    description: Attribute.Text & Attribute.Required;
+    description: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 500;
+      }>;
     image: Attribute.Media & Attribute.Required;
-    title: Attribute.String;
+    title: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 50;
+      }>;
   };
 }
 
@@ -71,10 +88,14 @@ export interface SharedSeo extends Schema.Component {
     metaTitle: Attribute.String &
       Attribute.Required &
       Attribute.SetMinMaxLength<{
-        maxLength: 20;
+        maxLength: 50;
       }>;
     metaSocial: Attribute.Component<'shared.meta-social', true>;
-    keywords: Attribute.String & Attribute.Required;
+    keywords: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
     metaDescription: Attribute.Text &
       Attribute.Required &
       Attribute.SetMinMaxLength<{

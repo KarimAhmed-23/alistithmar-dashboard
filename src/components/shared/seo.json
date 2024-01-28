@@ -10,7 +10,7 @@
     "metaTitle": {
       "type": "string",
       "required": true,
-      "maxLength": 20
+      "maxLength": 50
     },
     "metaSocial": {
       "displayName": "metaSocial",
@@ -20,7 +20,8 @@
     },
     "keywords": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 200
     },
     "metaDescription": {
       "type": "text",
